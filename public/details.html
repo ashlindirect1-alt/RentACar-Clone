@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Car Details - RentACar</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/details.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 RentACar
+        </div>
+
+        <nav>
+
+            <a href="/index.html">
+                Home
+            </a>
+
+            <a href="/cars.html">
+                Cars
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <button
+            class="login-btn"
+            type="button"
+            onclick="window.location.href='/signin.html'"
+        >
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="details-container">
+
+        <a
+            href="/cars.html"
+            class="back-link"
+        >
+            ← Back to Available Cars
+        </a>
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="loading"
+        >
+            Loading car details...
+        </div>
+
+
+        <!-- CAR DETAILS -->
+
+        <section
+            id="carDetails"
+            class="car-details hidden"
+        >
+
+            <!-- IMAGE -->
+
+            <div class="details-image">
+
+                <img
+                    id="carImage"
+                    src=""
+                    alt="Rental Car"
+                >
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="details-info">
+
+                <span
+                    id="carType"
+                    class="car-badge"
+                >
+                    Car
+                </span>
+
+                <h1 id="carName">
+                    Car Name
+                </h1>
+
+                <div
+                    id="carRating"
+                    class="details-rating"
+                >
+                    ⭐ 0 / 5
+                </div>
+
+                <p
+                    id="carDescription"
+                    class="description"
+                >
+                    Car description
+                </p>
+
+
+                <!-- SPECIFICATIONS -->
+
+                <div class="specifications">
+
+                    <div class="spec-item">
+
+                        <span class="spec-icon">
+                            🚗
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Type
+                            </strong>
+
+                            <p id="specType">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="spec-item">
+
+                        <span class="spec-icon">
+                            ⛽
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Fuel
+                            </strong>
+
+                            <p id="specFuel">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="spec-item">
+
+                        <span class="spec-icon">
+                            ⚙️
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Transmission
+                            </strong>
+
+                            <p id="specTransmission">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="spec-item">
+
+                        <span class="spec-icon">
+                            👥
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Seats
+                            </strong>
+
+                            <p id="specSeats">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="booking-box">
+
+                    <div>
+
+                        <span class="price-label">
+                            Rental Price
+                        </span>
+
+                        <div
+                            id="carPrice"
+                            class="details-price"
+                        >
+                            $0/day
+                        </div>
+
+                    </div>
+
+                    <button
+                        id="bookNowBtn"
+                        class="book-btn"
+                        type="button"
+                    >
+                        Book Now
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ERROR -->
+
+        <section
+            id="errorMessage"
+            class="error-message hidden"
+        >
+
+            <h2>
+                🚗 Car Not Found
+            </h2>
+
+            <p>
+                The car you are looking for does not exist.
+            </p>
+
+            <a
+                href="/cars.html"
+                class="back-button"
+            >
+                View Available Cars
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>
+                🚗 RentACar
+            </h3>
+
+            <p>
+                Easy and affordable car rentals.
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 RentACar Clone. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="/js/details.js"></script>
+
+</body>
+
+</html>

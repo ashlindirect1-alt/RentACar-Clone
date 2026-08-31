@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RentACar - Car Rental</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 RentACar
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="cars.html">
+                Cars
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a
+            href="signin.html"
+            class="login-btn"
+            onclick="window.location.href='/signin.html'"
+        >
+            Sign In
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Rent Your Perfect Car
+            </h1>
+
+            <p>
+                Easy, affordable and reliable car rentals.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="search-box">
+
+            <div class="search-field">
+
+                <label for="pickupLocation">
+                    📍 Pickup Location
+                </label>
+
+                <input
+                    type="text"
+                    id="pickupLocation"
+                    placeholder="City or location"
+                    required
+                >
+
+            </div>
+
+
+            <div class="search-field">
+
+                <label for="pickupDate">
+                    📅 Pickup Date
+                </label>
+
+                <input
+                    type="date"
+                    id="pickupDate"
+                    required
+                >
+
+            </div>
+
+
+            <div class="search-field">
+
+                <label for="returnDate">
+                    📅 Return Date
+                </label>
+
+                <input
+                    type="date"
+                    id="returnDate"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                id="searchBtn"
+                class="search-btn"
+                type="button"
+            >
+                Search Cars
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED CARS
+    ========================== -->
+
+    <section class="featured-section">
+
+        <div class="section-heading">
+
+            <h2>
+                Featured Cars
+            </h2>
+
+            <p>
+                Choose from our popular rental cars.
+            </p>
+
+        </div>
+
+
+        <div
+            id="featuredCars"
+            class="cars-grid"
+        >
+
+            <p>
+                Loading cars...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="why-section">
+
+        <h2>
+            Why Choose RentACar?
+        </h2>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🚗
+                </div>
+
+                <h3>
+                    Wide Selection
+                </h3>
+
+                <p>
+                    Choose from a wide range of
+                    reliable rental cars.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    💰
+                </div>
+
+                <h3>
+                    Affordable Prices
+                </h3>
+
+                <p>
+                    Find great cars at competitive
+                    rental prices.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Highly Rated
+                </h3>
+
+                <p>
+                    Rent cars that are trusted and
+                    highly rated by customers.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    🔒
+                </div>
+
+                <h3>
+                    Easy Booking
+                </h3>
+
+                <p>
+                    Book your car quickly with our
+                    simple booking system.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+                    🚗 RentACar
+                </h3>
+
+                <p>
+                    Easy, affordable and reliable
+                    car rentals.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="cars.html">
+                    Cars
+                </a>
+
+                <a href="deals.html">
+                    Deals
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 RentACar Clone.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="/js/index.js"></script>
+
+</body>
+
+</html>

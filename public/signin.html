@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign In - RentACar</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <style>
+
+        .signin-container {
+            width: 90%;
+            max-width: 450px;
+            margin: 60px auto 80px;
+        }
+
+        .signin-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .signin-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signin-logo {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .signin-header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .signin-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 14px;
+            border: 1px solid #d5dbe5;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: #0066ff;
+            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+        }
+
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            background: #0066ff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .signin-btn:hover {
+            background: #0052cc;
+        }
+
+        .signin-message {
+            display: none;
+            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            background: #e8f7ed;
+            color: #207a3c;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .signin-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signin-links p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .signin-links a {
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signin-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 500px) {
+
+            .signin-container {
+                width: 92%;
+                margin-top: 35px;
+            }
+
+            .signin-card {
+                padding: 25px 20px;
+            }
+
+            .signin-header h1 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 RentACar
+        </div>
+
+        <nav>
+
+            <a href="/index.html">
+                Home
+            </a>
+
+            <a href="/cars.html">
+                Cars
+            </a>
+
+            <a href="/about.html">
+                About
+            </a>
+
+            <a href="/contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <button
+            class="login-btn"
+            type="button"
+        >
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         SIGN IN
+    ========================== -->
+
+    <main class="signin-container">
+
+        <section class="signin-card">
+
+            <div class="signin-header">
+
+                <div class="signin-logo">
+                    🚗
+                </div>
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <p>
+                    Sign in to your RentACar account
+                </p>
+
+            </div>
+
+
+            <div
+                id="signinMessage"
+                class="signin-message"
+            >
+                Sign in successful!
+            </div>
+
+
+            <form id="signinForm">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="signin-btn"
+                >
+                    Sign In
+                </button>
+
+            </form>
+
+
+            <div class="signin-links">
+
+                <p>
+                    Don't have an account?
+                    <a href="#">
+                        Create Account
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>
+                🚗 RentACar
+            </h3>
+
+            <p>
+                Easy and affordable car rentals.
+            </p>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 RentACar Clone. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         SIGN IN JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const signinForm =
+            document.getElementById("signinForm");
+
+        const signinMessage =
+            document.getElementById("signinMessage");
+
+
+        signinForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                signinMessage.style.display =
+                    "block";
+
+                signinMessage.textContent =
+                    "Sign in successful!";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

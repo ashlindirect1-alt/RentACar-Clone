@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Available Cars - RentACar</title>
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <!-- Cars Page CSS -->
+    <link
+        rel="stylesheet"
+        href="/css/cars.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         NAVBAR
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 RentACar
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="cars.html"
+                class="active"
+            >
+                Cars
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <button 
+             class="login-btn"
+             type="button"
+             onclick="window.location.href='/signin.html'"
+        >     
+            Sign In
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================
+         PAGE HEADER
+    ====================================== -->
+
+    <section class="cars-header">
+
+        <h1>
+            Available Rental Cars
+        </h1>
+
+        <p>
+            Find the perfect car for your journey.
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================
+         SEARCH RESULTS
+    ====================================== -->
+
+    <section class="search-results-info">
+
+
+        <div>
+
+            <span>
+                📍 Location
+            </span>
+
+            <strong id="searchLocation">
+                All locations
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                📅 Pickup
+            </span>
+
+            <strong id="searchPickup">
+                -
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                📅 Return
+            </span>
+
+            <strong id="searchReturn">
+                -
+            </strong>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="cars-page">
+
+
+        <!-- =================================
+             FILTER SIDEBAR
+        ================================== -->
+
+        <aside class="filters">
+
+
+            <div class="filter-header">
+
+                <h2>
+                    Filters
+                </h2>
+
+                <button
+                    id="clearFilters"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- CAR TYPE -->
+
+            <div class="filter-group">
+
+                <h3>
+                    Car Type
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="carType"
+                        value="Sedan"
+                    >
+
+                    Sedan
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="carType"
+                        value="SUV"
+                    >
+
+                    SUV
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="carType"
+                        value="Hatchback"
+                    >
+
+                    Hatchback
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="carType"
+                        value="Luxury"
+                    >
+
+                    Luxury
+
+                </label>
+
+            </div>
+
+
+
+            <!-- PRICE -->
+
+            <div class="filter-group">
+
+                <h3>
+                    Maximum Price
+                </h3>
+
+
+                <select id="priceFilter">
+
+                    <option value="all">
+                        Any Price
+                    </option>
+
+                    <option value="40">
+                        Up to $40/day
+                    </option>
+
+                    <option value="60">
+                        Up to $60/day
+                    </option>
+
+                    <option value="80">
+                        Up to $80/day
+                    </option>
+
+                    <option value="100">
+                        Up to $100/day
+                    </option>
+
+                    <option value="150">
+                        Up to $150/day
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- FUEL TYPE -->
+
+            <div class="filter-group">
+
+                <h3>
+                    Fuel Type
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="fuelType"
+                        value="Petrol"
+                    >
+
+                    Petrol
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="fuelType"
+                        value="Diesel"
+                    >
+
+                    Diesel
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="fuelType"
+                        value="Hybrid"
+                    >
+
+                    Hybrid
+
+                </label>
+
+            </div>
+
+
+
+            <!-- BRAND -->
+
+            <div class="filter-group">
+
+                <h3>
+                    Brand
+                </h3>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="Toyota"
+                    >
+
+                    Toyota
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="Honda"
+                    >
+
+                    Honda
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="Kia"
+                    >
+
+                    Kia
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="BMW"
+                    >
+
+                    BMW
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="Mercedes"
+                    >
+
+                    Mercedes
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="brand"
+                        value="Hyundai"
+                    >
+
+                    Hyundai
+
+                </label>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             CAR RESULTS
+        ================================== -->
+
+        <section class="car-results">
+
+
+            <!-- RESULTS TOP BAR -->
+
+            <div class="results-top">
+
+                <div>
+
+                    <h2>
+                        Rental Cars
+                    </h2>
+
+                    <p id="resultsCount">
+                        Loading cars...
+                    </p>
+
+                </div>
+
+
+                <div class="sort-box">
+
+                    <label for="sortCars">
+                        Sort by:
+                    </label>
+
+
+                    <select id="sortCars">
+
+                        <option value="default">
+                            Recommended
+                        </option>
+
+                        <option value="price-low">
+                            Price: Low to High
+                        </option>
+
+                        <option value="price-high">
+                            Price: High to Low
+                        </option>
+
+                        <option value="rating">
+                            Best Rated
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARS WILL LOAD HERE -->
+
+            <div
+                id="carsContainer"
+                class="cars-grid"
+            >
+
+                <p class="loading-message">
+                    Loading available cars...
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    🚗 RentACar
+                </h3>
+
+                <p>
+                    Easy, affordable and reliable
+                    car rentals.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="cars.html">
+                    Cars
+                </a>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            <p>
+                © 2026 RentACar Clone.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="/js/cars.js"></script>
+
+</body>
+
+</html>

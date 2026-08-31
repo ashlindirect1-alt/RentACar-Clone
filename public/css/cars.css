@@ -1,0 +1,578 @@
+/* =========================================
+   CARS PAGE HEADER
+========================================= */
+
+.cars-header {
+    background: #0066ff;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.cars-header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.cars-header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+/* =========================================
+   SEARCH RESULTS INFO
+========================================= */
+
+.search-results-info {
+    max-width: 1200px;
+    margin: 30px auto 25px;
+    padding: 18px 20px;
+
+    background: white;
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.search-results-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding-right: 30px;
+    min-width: 180px;
+
+    border-right: 1px solid #ddd;
+}
+
+.search-results-info div:last-child {
+    border-right: none;
+}
+
+.search-results-info span {
+    font-size: 12px;
+    color: #777;
+    font-weight: 500;
+}
+
+.search-results-info strong {
+    font-size: 15px;
+    color: #222;
+}
+
+/* =========================================
+   MAIN CARS PAGE
+========================================= */
+
+.cars-page {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* =========================================
+   FILTER SIDEBAR
+========================================= */
+
+.filters {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    position: sticky;
+    top: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.filter-header h2 {
+    font-size: 21px;
+}
+
+.filter-header button {
+    border: none;
+    background: transparent;
+
+    color: #0066ff;
+    font-weight: bold;
+
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.filter-header button:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   FILTER GROUP
+========================================= */
+
+.filter-group {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-group h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: #555;
+
+    cursor: pointer;
+}
+
+.filter-group label:hover {
+    color: #0066ff;
+}
+
+.filter-group input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.filter-group select {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    padding: 0 10px;
+    background: white;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-group select:focus {
+    border-color: #0066ff;
+}
+
+/* =========================================
+   CAR RESULTS
+========================================= */
+
+.car-results {
+    min-width: 0;
+}
+
+.results-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.results-top h2 {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.results-top p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* =========================================
+   SORT
+========================================= */
+
+.sort-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+.sort-box label {
+    font-size: 14px;
+    color: #555;
+}
+
+.sort-box select {
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: white;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.sort-box select:focus {
+    border-color: #0066ff;
+}
+
+/* =========================================
+   CAR GRID
+========================================= */
+
+.car-results .cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* =========================================
+   CAR CARD
+========================================= */
+
+.car-results .car-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.car-results .car-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================================
+   CAR IMAGE
+========================================= */
+
+.car-results .car-image {
+    height: 190px;
+    background: #e9eef5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    font-size: 70px;
+}
+
+.car-results .car-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   CAR INFORMATION
+========================================= */
+
+.car-results .car-info {
+    padding: 20px;
+}
+
+.car-results .car-info h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.car-results .car-info > p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+
+    min-height: 42px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   CAR SPECIFICATIONS
+========================================= */
+
+.car-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    margin-bottom: 18px;
+    padding: 12px;
+
+    background: #f8fafc;
+    border-radius: 7px;
+}
+
+.car-specs span {
+    font-size: 12px;
+    color: #555;
+}
+
+/* =========================================
+   CAR BOTTOM
+========================================= */
+
+.car-results .car-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.car-results .rating {
+    color: #e6a400;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.car-results .price {
+    color: #0066ff;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.car-results .price small {
+    font-size: 12px;
+    color: #777;
+    font-weight: normal;
+}
+
+/* =========================================
+   DETAILS / BOOK BUTTON
+========================================= */
+
+.car-results .details-btn {
+    width: 100%;
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #0066ff;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.car-results .details-btn:hover {
+    background: #0052cc;
+}
+
+/* =========================================
+   LOADING MESSAGE
+========================================= */
+
+.loading-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+    padding: 50px 20px;
+
+    color: #666;
+    font-size: 16px;
+}
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+    grid-column: 1 / -1;
+
+    background: white;
+    border-radius: 12px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.no-results-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.no-results h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.no-results p {
+    color: #777;
+}
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message {
+    grid-column: 1 / -1;
+
+    background: white;
+    border-radius: 12px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.error-message h3 {
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.error-message p {
+    color: #777;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .cars-page {
+        grid-template-columns: 200px 1fr;
+        gap: 20px;
+    }
+
+    .car-results .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-results-info {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .cars-header {
+        padding: 35px 20px;
+    }
+
+    .cars-header h1 {
+        font-size: 28px;
+    }
+
+    .cars-header p {
+        font-size: 15px;
+    }
+
+    .search-results-info {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .search-results-info div {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+
+        padding: 10px 0;
+        min-width: 0;
+    }
+
+    .search-results-info div:last-child {
+        border-bottom: none;
+    }
+
+    .cars-page {
+        display: block;
+        margin-bottom: 50px;
+        padding: 0 20px;
+    }
+
+    .filters {
+        position: static;
+        margin-bottom: 25px;
+    }
+
+    .results-top {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .sort-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sort-box select {
+        width: 100%;
+    }
+
+    .car-results .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .car-results .car-image {
+        height: 200px;
+    }
+}

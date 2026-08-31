@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Book Your Car - RentACar</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/booking.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🚗 RentACar
+        </div>
+
+        <nav>
+
+            <a href="/index.html">
+                Home
+            </a>
+
+            <a href="/cars.html">
+                Cars
+            </a>
+
+            <a href="deals.html">
+                Deals
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <button
+            class="login-btn"
+            type="button"
+            onclick="window.location.href='/signin.html'"
+        >
+            Sign In
+        </button>
+
+    </header>
+
+
+    <!-- BOOKING PAGE -->
+
+    <main class="booking-container">
+
+        <a
+            href="/cars.html"
+            class="back-link"
+        >
+            ← Back to Cars
+        </a>
+
+        <h1>
+            Complete Your Booking
+        </h1>
+
+        <p class="page-subtitle">
+            Enter your details to reserve your rental car.
+        </p>
+
+
+        <!-- BOOKING LAYOUT -->
+
+        <div class="booking-layout">
+
+            <!-- FORM -->
+
+            <section class="booking-form-card">
+
+                <h2>
+                    Your Information
+                </h2>
+
+                <form id="bookingForm">
+
+                    <div class="form-group">
+
+                        <label for="customerName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="pickupLocation">
+                            Pickup Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="pickupLocation"
+                            name="pickupLocation"
+                            placeholder="e.g. Lahore"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="date-row">
+
+                        <div class="form-group">
+
+                            <label for="pickupDate">
+                                Pickup Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="pickupDate"
+                                name="pickupDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="returnDate">
+                                Return Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="returnDate"
+                                name="returnDate"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="formError"
+                        class="form-error hidden"
+                        role="alert"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="confirm-btn"
+                    >
+                        Confirm Booking
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- CAR SUMMARY -->
+
+            <aside class="booking-summary">
+
+                <h2>
+                    Your Car
+                </h2>
+
+                <div
+                    id="summaryImage"
+                    class="summary-image"
+                >
+                    🚗
+                </div>
+
+                <h3 id="summaryCar">
+                    Loading...
+                </h3>
+
+                <p id="summaryType">
+                    ...
+                </p>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Price per day
+                    </span>
+
+                    <strong id="summaryPrice">
+                        $0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line">
+
+                    <span>
+                        Rental days
+                    </span>
+
+                    <strong id="summaryDays">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="total-line">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="summaryTotal">
+                        $0.00
+                    </strong>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+
+        <!-- CONFIRMATION -->
+
+        <section
+            id="confirmation"
+            class="confirmation hidden"
+        >
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Booking Confirmed! 🎉
+            </h2>
+
+            <p>
+                Your car has been successfully reserved.
+            </p>
+
+
+            <div class="confirmation-details">
+
+                <p>
+                    Booking ID:
+                    <strong id="confirmationId">
+                        -
+                    </strong>
+                </p>
+
+                <p>
+                    Car:
+                    <strong id="confirmationCar">
+                        -
+                    </strong>
+                </p>
+
+                <p>
+                    Rental Days:
+                    <strong id="confirmationDays">
+                        -
+                    </strong>
+                </p>
+
+                <p>
+                    Total:
+                    <strong id="confirmationTotal">
+                        -
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <a
+                href="/index.html"
+                class="home-btn"
+            >
+                Back to Home
+            </a>
+
+            <a
+                href="/cars.html"
+                class="cars-btn"
+            >
+                Browse More Cars
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h3>
+                    🚗 RentACar
+                </h3>
+
+                <p>
+                    Easy and affordable car rentals.
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 RentACar Clone.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="/js/booking.js"></script>
+
+</body>
+
+</html>

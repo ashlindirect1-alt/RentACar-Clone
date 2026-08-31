@@ -1,0 +1,141 @@
+/* =====================================
+   DEALS PAGE
+===================================== */
+
+.page-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    min-height: 500px;
+}
+
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* =====================================
+   DEALS GRID
+===================================== */
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =====================================
+   DEAL CARD
+===================================== */
+
+.deal-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================
+   DEAL ICON
+===================================== */
+
+.deal-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   DEAL TITLE
+===================================== */
+
+.deal-card h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+
+/* =====================================
+   DEAL DESCRIPTION
+===================================== */
+
+.deal-card p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   DEAL OFFER
+===================================== */
+
+.deal-offer {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0066ff;
+    margin-bottom: 22px;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .deals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-container {
+        margin: 40px auto;
+    }
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

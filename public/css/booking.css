@@ -1,0 +1,455 @@
+/* =========================================
+   BOOKING CONTAINER
+========================================= */
+
+.booking-container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto 70px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #0066ff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #0052cc;
+    text-decoration: underline;
+}
+
+.booking-container h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   BOOKING LAYOUT
+========================================= */
+
+.booking-layout {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.booking-form-card,
+.booking-summary {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form-card h2,
+.booking-summary h2 {
+    margin-bottom: 25px;
+
+    font-size: 22px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d5dbe5;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    box-sizing: border-box;
+
+    outline: none;
+
+    background: white;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #0066ff;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 102, 255, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.date-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+/* =========================================
+   CONFIRM BUTTON
+========================================= */
+
+.confirm-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    background: #0066ff;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.confirm-btn:hover {
+    background: #0052cc;
+
+    transform: translateY(-1px);
+}
+
+.confirm-btn:disabled {
+    background: #9dbcf0;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.form-error {
+    background: #fff0f0;
+
+    color: #c62828;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    margin-bottom: 18px;
+
+    font-size: 14px;
+
+    border: 1px solid #ffd0d0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================================
+   CAR SUMMARY
+========================================= */
+
+.summary-image {
+    height: 200px;
+
+    background: #e9eef5;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+.summary-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.booking-summary h3 {
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+#summaryType {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.summary-line,
+.total-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 15px 0;
+}
+
+.summary-line span {
+    color: #666;
+}
+
+.summary-line strong {
+    color: #333;
+}
+
+.booking-summary hr {
+    border: none;
+
+    border-top: 1px solid #eee;
+
+    margin: 20px 0;
+}
+
+.total-line {
+    font-size: 20px;
+
+    margin-top: 20px;
+}
+
+.total-line strong {
+    color: #0066ff;
+
+    font-size: 25px;
+}
+
+/* =========================================
+   CONFIRMATION
+========================================= */
+
+.confirmation {
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 45px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #e8f7ed;
+
+    color: #20a04b;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+.confirmation h2 {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+.confirmation > p {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.confirmation-details {
+    background: #f7f9fc;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    max-width: 500px;
+
+    margin: 0 auto 25px;
+}
+
+.confirmation-details p {
+    margin: 10px 0;
+}
+
+.confirmation-details strong {
+    color: #0066ff;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.home-btn,
+.cars-btn {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 5px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.home-btn {
+    background: #0066ff;
+
+    color: white;
+}
+
+.home-btn:hover {
+    background: #0052cc;
+
+    transform: translateY(-1px);
+}
+
+.cars-btn {
+    background: #eef4ff;
+
+    color: #0066ff;
+}
+
+.cars-btn:hover {
+    background: #dce9ff;
+
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .booking-container {
+        width: 92%;
+
+        margin-top: 25px;
+    }
+
+    .booking-container h1 {
+        font-size: 28px;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form-card,
+    .booking-summary {
+        padding: 20px;
+    }
+
+    .date-row {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-image {
+        height: 180px;
+    }
+
+    .confirmation {
+        padding: 30px 20px;
+    }
+
+    .confirmation h2 {
+        font-size: 24px;
+    }
+
+    .home-btn,
+    .cars-btn {
+        display: block;
+
+        margin: 10px 0;
+    }
+}
